@@ -30,8 +30,7 @@ jobs:
           echo "::set-output name=SHA_7::${GITHUB_SHA::7}"
         id: commit_info
 
-      - name: Build packages
+      - name: Deploy package
         run: mvn -B -f bom/pom.xml -P "java8,java17" clean deploy
-    secrets:
-      mm-webhook-url: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
