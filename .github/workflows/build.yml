@@ -1,0 +1,12 @@
+name: Maven Build Artifact
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    uses: empayre/java-workflow/.github/workflows/maven-swag-build.yml@master
+    with:
+      run-script-name: build
