@@ -15,22 +15,6 @@ jobs:
           - { os: ubuntu-20.04, arch: "linux/amd64" }
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Branch name and revision
-        id: branch_name
-        run: |
-          set -xeo pipefail
-          
-          export SOURCE_NAME="${GITHUB_REF#refs/*/}"
-          export SOURCE_BRANCH="${GITHUB_REF#refs/heads/}"
-          export SOURCE_TAG="${GITHUB_REF#refs/tags/}"
-          export SOURCE_TAG_VERSION="${GITHUB_REF#refs/tags/v}"
-          export REVISION="$SOURCE_TAG_VERSION"
-          
-          echo "SOURCE_TAG_VERSION=$SOURCE_TAG_VERSION" >> $GITHUB_ENV
-          echo "REVISION=$REVISION" >> $GITHUB_ENV
-          
-          cat $GITHUB_ENV > github.env
-
       - name: Checkout the repository
         uses: actions/checkout@v3
         with:
@@ -42,25 +26,13 @@ jobs:
           distribution: temurin
           cache: 'maven'
 
-      - name: Setup directories
-        run: |
-          BASE_DIR=/var/opt/cprocsp
-          sudo mkdir -p $BASE_DIR/tmp
-          sudo chmod a+rwx $BASE_DIR/tmp
-
-      - name: Retrieve commit info
-        run: |
-          echo "::set-output name=COMMIT_NUMBER::$(git rev-list HEAD --count)"
-          echo "::set-output name=SHA_7::${GITHUB_SHA::7}"
-        id: commit_info
-
       - name: Deploy package
         shell: bash
         run: |
           set -xeo pipefail
           echo "REVISION: $REVISION"
           
-          mvn -B -f bom/pom.xml -Drevision="${GITHUB_SHA::7}" -P "java8,java17" clean deploy
+          mvn -B -X -f bom/pom.xml -Drevision="${GITHUB_SHA::7}" -P "java8,java17" clean deploy
           echo "Done."
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
