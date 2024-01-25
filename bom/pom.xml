@@ -29,7 +29,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Empayre Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/empayre/tdlight-java-bom</url>
+			<url>https://maven.pkg.github.com/empayre/tdlight-java</url>
 		</repository>
 	</repositories>
 
@@ -37,7 +37,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Empayre Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/empayre/tdlight-java-bom</url>
+			<url>https://maven.pkg.github.com/empayre/tdlight-java</url>
 		</repository>
 	</distributionManagement>
 
