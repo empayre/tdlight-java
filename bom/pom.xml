@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>it.tdlight</groupId>
+	<groupId>com.empayre</groupId>
 	<artifactId>tdlight-java-bom</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 	<name>TDLight Java BOM</name>
 	<properties>
-		<revision>3.0.0.0-SNAPSHOT</revision>
+		<revision>1.0-SNAPSHOT</revision>
 		<tdlight.natives.version>4.0.495</tdlight.natives.version>
 		<tdlight.api.version>4.0.465</tdlight.api.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -60,18 +60,18 @@
 				<classifier>legacy</classifier>
 			</dependency>
 			<dependency>
-				<groupId>it.tdlight</groupId>
+				<groupId>com.empayre</groupId>
 				<artifactId>tdlight-java</artifactId>
 				<version>${revision}</version>
 			</dependency>
 			<dependency>
-				<groupId>it.tdlight</groupId>
+				<groupId>com.empayre</groupId>
 				<artifactId>tdlight-java</artifactId>
 				<version>${revision}</version>
 				<classifier>jdk8</classifier>
 			</dependency>
 			<dependency>
-				<groupId>it.tdlight</groupId>
+				<groupId>com.empayre</groupId>
 				<artifactId>tdlight-java-parent</artifactId>
 				<version>${revision}</version>
 			</dependency>

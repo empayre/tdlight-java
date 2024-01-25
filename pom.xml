@@ -3,15 +3,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>tdlight-java-parent</artifactId>
+	<groupId>com.empayre</groupId>
 	<packaging>pom</packaging>
 	<parent>
-		<groupId>it.tdlight</groupId>
+		<groupId>com.empayre</groupId>
 		<version>${revision}</version>
 		<artifactId>tdlight-java-bom</artifactId>
 		<relativePath>bom/pom.xml</relativePath>
 	</parent>
 	<properties>
-		<revision>3.0.0.0-SNAPSHOT</revision>
+		<revision>1.0-SNAPSHOT</revision>
 		<zxing.version>3.5.1</zxing.version>
 		<reactive.streams.version>1.0.4</reactive.streams.version>
 		<slf4j.api.version>2.0.5</slf4j.api.version>

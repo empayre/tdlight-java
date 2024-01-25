@@ -1,0 +1,36 @@
+name: Maven Deploy Artifact
+
+on:
+  push:
+    branches:
+      - 'epic'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: "adopt"
+          java-version: "17"
+          cache: "maven"
+
+      - name: Setup directories
+        run: |
+          BASE_DIR=/var/opt/cprocsp
+          sudo mkdir -p $BASE_DIR/tmp
+          sudo chmod a+rwx $BASE_DIR/tmp
+
+      - name: Retrieve commit info
+        run: |
+          echo "::set-output name=COMMIT_NUMBER::$(git rev-list HEAD --count)"
+          echo "::set-output name=SHA_7::${GITHUB_SHA::7}"
+        id: commit_info
+
+      - name: Deploy package
+        run: mvn -B -f bom/pom.xml -P "java8,java17" clean deploy
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
