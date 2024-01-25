@@ -4,19 +4,43 @@ on:
   push:
     branches:
       - 'epic'
+    tags:
+      - 'v*'
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - { os: ubuntu-20.04, arch: "linux/amd64" }
+    runs-on: ${{ matrix.os }}
     steps:
+      - name: Branch name and revision
+        id: branch_name
+        run: |
+          set -xeo pipefail
+          
+          export SOURCE_NAME="${GITHUB_REF#refs/*/}"
+          export SOURCE_BRANCH="${GITHUB_REF#refs/heads/}"
+          export SOURCE_TAG="${GITHUB_REF#refs/tags/}"
+          export SOURCE_TAG_VERSION="${GITHUB_REF#refs/tags/v}"
+          export REVISION="$SOURCE_TAG_VERSION"
+          
+          echo "SOURCE_TAG_VERSION=$SOURCE_TAG_VERSION" >> $GITHUB_ENV
+          echo "REVISION=$REVISION" >> $GITHUB_ENV
+          
+          cat $GITHUB_ENV > github.env
+
       - name: Checkout the repository
         uses: actions/checkout@v3
+        with:
+          submodules: "recursive"
 
       - uses: actions/setup-java@v3
         with:
-          distribution: "adopt"
-          java-version: "17"
-          cache: "maven"
+          java-version: 17
+          distribution: temurin
+          cache: 'maven'
 
       - name: Setup directories
         run: |
@@ -31,6 +55,11 @@ jobs:
         id: commit_info
 
       - name: Deploy package
-        run: mvn -B -f bom/pom.xml -P "java8,java17" clean deploy
+        shell: bash
+        run: |
+          set -xeo pipefail
+          
+          mvn -B -f bom/pom.xml -P "java8,java17" clean deploy
+          echo "Done."
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
