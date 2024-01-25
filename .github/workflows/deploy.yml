@@ -35,4 +35,4 @@ jobs:
           mvn -B -X -f bom/pom.xml -Drevision="${GITHUB_SHA::7}" -P "java8,java17" clean deploy
           echo "Done."
     env:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
