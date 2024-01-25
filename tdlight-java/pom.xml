@@ -293,12 +293,7 @@
 						<phase>none</phase>
 						<!-- specify source/target for IDE integration -->
 						<configuration>
-							<release>8</release>
-							<excludes>
-								<exclude>module-info.java</exclude>
-							</excludes>
-							<forceJavacCompilerUse>true</forceJavacCompilerUse>
-							<verbose>true</verbose>
+							<release>9</release>
 						</configuration>
 					</execution>
 					<!-- compile sources with Java 11 -->
@@ -316,15 +311,15 @@
 						</configuration>
 					</execution>
 					<!-- compile sources with Java 9 to generate and validate module-info.java -->
-<!--					<execution>-->
-<!--						<id>java-9-module-compile</id>-->
-<!--						<goals>-->
-<!--							<goal>compile</goal>-->
-<!--						</goals>-->
-<!--						<configuration>-->
-<!--							<release>9</release>-->
-<!--						</configuration>-->
-<!--					</execution>-->
+					<execution>
+						<id>java-9-module-compile</id>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<release>9</release>
+						</configuration>
+					</execution>
 					<!-- recompile sources as Java 8 to overwrite Java 9 class files, except module-info.java -->
 					<execution>
 						<id>java-8-compile</id>
