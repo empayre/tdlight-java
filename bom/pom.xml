@@ -29,7 +29,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Empayre Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/empayre/adapter-c2c-proto</url>
+			<url>https://maven.pkg.github.com/empayre</url>
 		</repository>
 	</repositories>
 
@@ -37,7 +37,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Empayre Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/empayre/adapter-c2c-proto</url>
+			<url>https://maven.pkg.github.com/empayre/tdlight-java-bom</url>
 		</repository>
 	</distributionManagement>
 
