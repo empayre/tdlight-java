@@ -8,7 +8,7 @@ import java.util.concurrent.Executor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-final class ScannerClientInteraction implements ClientInteraction {
+public class ScannerClientInteraction implements ClientInteraction {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ScannerClientInteraction.class);
 

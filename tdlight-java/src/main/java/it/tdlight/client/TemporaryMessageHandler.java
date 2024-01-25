@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentMap;
 
-class TemporaryMessageHandler implements GenericUpdateHandler<TdApi.Update> {
+public class TemporaryMessageHandler implements GenericUpdateHandler<TdApi.Update> {
 
 	private static final Logger LOG = LoggerFactory.getLogger(TemporaryMessageHandler.class);
 

@@ -10,7 +10,7 @@ package it.tdlight.util;
  * the native library would be loaded into the native library's ClassLoader, not the
  * caller's ClassLoader.
  */
-final class NativeLibraryUtil {
+public class NativeLibraryUtil {
 	/**
 	 * Delegate the calling to {@link System#load(String)} or {@link System#loadLibrary(String)}.
 	 * @param libName - The native library path or name

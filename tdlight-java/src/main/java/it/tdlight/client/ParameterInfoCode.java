@@ -4,7 +4,7 @@ import it.tdlight.jni.TdApi.AuthenticationCodeType;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public final class ParameterInfoCode implements ParameterInfo {
+public class ParameterInfoCode implements ParameterInfo {
 
 	private final String phoneNumber;
 	private final AuthenticationCodeType nextType;

@@ -3,7 +3,7 @@ package it.tdlight.client;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public final class ParameterInfoNotifyLink implements ParameterInfo {
+public class ParameterInfoNotifyLink implements ParameterInfo {
 
 	private final String link;
 

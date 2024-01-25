@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'epic'
-    tags:
-      - 'v*'
 
 jobs:
   deploy:
@@ -32,6 +30,5 @@ jobs:
           set -xeo pipefail
           
           mvn -B -f bom/pom.xml -Drevision="1.0-${GITHUB_SHA::7}" -P "java8,java17" clean deploy
-          echo "Done."
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -7,7 +7,7 @@ import it.tdlight.jni.TdApi.AuthorizationStateWaitRegistration;
 import it.tdlight.jni.TdApi.RegisterUser;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 
-final class AuthorizationStateWaitRegistrationHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateWaitRegistrationHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private final TelegramClient client;
 	private final ClientInteraction clientInteraction;

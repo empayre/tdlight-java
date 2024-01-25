@@ -6,7 +6,7 @@ import it.tdlight.jni.TdApi;
 import it.tdlight.jni.TdApi.AuthorizationStateWaitTdlibParameters;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 
-final class AuthorizationStateWaitTdlibParametersHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateWaitTdlibParametersHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private final TelegramClient client;
 	private final TDLibSettings settings;

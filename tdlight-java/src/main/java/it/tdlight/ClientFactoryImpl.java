@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 /**
  * TDLight client factory
  */
-class ClientFactoryImpl implements ClientFactory {
+public class ClientFactoryImpl implements ClientFactory {
 
 	private static final Logger logger = LoggerFactory.getLogger(ClientFactoryImpl.class);
 

@@ -5,7 +5,7 @@ import it.tdlight.jni.TdApi.AuthorizationStateClosed;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 import java.util.concurrent.CountDownLatch;
 
-final class AuthorizationStateWaitForExit implements GenericUpdateHandler<TdApi.UpdateAuthorizationState> {
+public class AuthorizationStateWaitForExit implements GenericUpdateHandler<TdApi.UpdateAuthorizationState> {
 
 	private final Runnable setClosed;
 

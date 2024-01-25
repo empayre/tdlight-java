@@ -11,7 +11,7 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public final class SimpleTelegramClientBuilder implements MutableTelegramClient {
+public class SimpleTelegramClientBuilder implements MutableTelegramClient {
 
 	private static final Logger LOG = LoggerFactory.getLogger(SimpleTelegramClientBuilder.class);
 	private final ClientFactory clientManager;

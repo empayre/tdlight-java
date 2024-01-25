@@ -2,7 +2,7 @@ package it.tdlight;
 
 import it.tdlight.jni.TdApi.Object;
 
-class NativeResponseReceiver extends ResponseReceiver {
+public class NativeResponseReceiver extends ResponseReceiver {
 
 	public NativeResponseReceiver(EventsHandler eventsHandler) {
 		super(eventsHandler);

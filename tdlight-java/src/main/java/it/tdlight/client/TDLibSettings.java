@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
 @SuppressWarnings("unused")
-public final class TDLibSettings {
+public class TDLibSettings {
 
 	private static final Path USER_HOME_PATH = Paths.get(System.getProperty("user.home"));
 	private static final String DISPLAY_LANGUAGE = Locale.getDefault().getDisplayLanguage();

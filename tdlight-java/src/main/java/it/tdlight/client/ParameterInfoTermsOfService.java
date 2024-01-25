@@ -4,7 +4,7 @@ import it.tdlight.jni.TdApi.TermsOfService;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public final class ParameterInfoTermsOfService implements ParameterInfo {
+public class ParameterInfoTermsOfService implements ParameterInfo {
 
 	private final TermsOfService termsOfService;
 

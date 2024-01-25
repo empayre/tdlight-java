@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MarkerFactory;
 
-class AutoCleaningTelegramClient implements TelegramClient {
+public class AutoCleaningTelegramClient implements TelegramClient {
 	private final InternalClient client;
 	private volatile CleanableSupport cleanable;
 

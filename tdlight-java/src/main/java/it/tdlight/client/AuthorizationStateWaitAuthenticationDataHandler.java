@@ -7,7 +7,7 @@ import it.tdlight.jni.TdApi.PhoneNumberAuthenticationSettings;
 import it.tdlight.jni.TdApi.SetAuthenticationPhoneNumber;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 
-final class AuthorizationStateWaitAuthenticationDataHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateWaitAuthenticationDataHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private final TelegramClient client;
 	private final Authenticable authenticable;

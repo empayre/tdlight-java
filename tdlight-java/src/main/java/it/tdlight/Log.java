@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * Class used for managing internal TDLib logging.
  */
-public final class Log {
+public class Log {
 
 	static {
 		try {

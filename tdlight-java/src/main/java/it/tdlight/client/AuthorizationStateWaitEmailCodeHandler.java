@@ -5,7 +5,7 @@ import it.tdlight.TelegramClient;
 import it.tdlight.jni.TdApi;
 import java.util.Locale;
 
-final class AuthorizationStateWaitEmailCodeHandler implements GenericUpdateHandler<TdApi.UpdateAuthorizationState> {
+public class AuthorizationStateWaitEmailCodeHandler implements GenericUpdateHandler<TdApi.UpdateAuthorizationState> {
 
 	private final TelegramClient client;
 	private final ClientInteraction clientInteraction;

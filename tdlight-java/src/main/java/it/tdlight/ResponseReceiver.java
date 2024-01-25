@@ -18,7 +18,7 @@ import java.util.concurrent.CountDownLatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-abstract class ResponseReceiver extends Thread implements AutoCloseable {
+public abstract class ResponseReceiver extends Thread implements AutoCloseable {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ResponseReceiver.class);
 	private static final String FLAG_USE_OPTIMIZED_DISPATCHER = "tdlight.dispatcher.use_optimized_dispatcher";

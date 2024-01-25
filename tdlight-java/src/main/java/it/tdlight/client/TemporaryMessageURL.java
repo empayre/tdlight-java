@@ -2,7 +2,7 @@ package it.tdlight.client;
 
 import java.util.Objects;
 
-final class TemporaryMessageURL {
+public class TemporaryMessageURL {
 
 	private final long chatId;
 	private final long messageId;

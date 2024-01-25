@@ -3,7 +3,7 @@ package it.tdlight.client;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public final class ParameterInfoPasswordHint implements ParameterInfo {
+public class ParameterInfoPasswordHint implements ParameterInfo {
 
 	private final String hint;
 	private final boolean hasRecoveryEmailAddress;

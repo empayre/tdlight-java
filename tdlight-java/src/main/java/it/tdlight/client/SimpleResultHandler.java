@@ -5,7 +5,7 @@ import it.tdlight.ResultHandler;
 import it.tdlight.jni.TdApi.Object;
 import it.tdlight.jni.TdApi.Update;
 
-class SimpleResultHandler<T extends Update> implements ResultHandler<Update> {
+public class SimpleResultHandler<T extends Update> implements ResultHandler<Update> {
 
 	private final int updateConstructor;
 	private final GenericUpdateHandler<? super T> handler;

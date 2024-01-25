@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-class ArrayUtil {
+public class ArrayUtil {
 
 	public static int[] copyFromCollection(Collection<Integer> list) {
 		int[] result = new int[list.size()];

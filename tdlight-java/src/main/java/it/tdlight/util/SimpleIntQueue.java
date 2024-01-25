@@ -2,7 +2,7 @@ package it.tdlight.util;
 
 import java.util.function.IntConsumer;
 
-public final class SimpleIntQueue {
+public class SimpleIntQueue {
 	public int size = 0;
 	public int[] a = new int[16];
 

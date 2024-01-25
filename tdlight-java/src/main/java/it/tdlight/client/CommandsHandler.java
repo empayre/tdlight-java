@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-final class CommandsHandler implements GenericUpdateHandler<UpdateNewMessage> {
+public class CommandsHandler implements GenericUpdateHandler<UpdateNewMessage> {
 
 	private static final Logger logger = LoggerFactory.getLogger(CommandsHandler.class);
 	private static final CopyOnWriteMap<CommandHandler, Void> EMPTY_COW_MAP = CopyOnWriteMap.newHashMap();

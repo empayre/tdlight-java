@@ -28,7 +28,7 @@ import java.util.stream.Stream;
 /**
  * The class to load the libraries needed to run Tdlib
  */
-public final class Native {
+public class Native {
 
 	/**
 	 * Internal util

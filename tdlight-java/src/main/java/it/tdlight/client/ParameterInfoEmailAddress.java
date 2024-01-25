@@ -4,7 +4,7 @@ import it.tdlight.jni.TdApi.AuthenticationCodeType;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public final class ParameterInfoEmailAddress implements ParameterInfo {
+public class ParameterInfoEmailAddress implements ParameterInfo {
 
 	private final boolean allowGoogleId;
 	private final boolean allowAppleId;

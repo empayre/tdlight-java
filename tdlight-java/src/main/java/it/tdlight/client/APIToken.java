@@ -3,7 +3,7 @@ package it.tdlight.client;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public final class APIToken {
+public class APIToken {
 
 	private int apiID;
 	private String apiHash;

@@ -9,7 +9,7 @@ import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-final class AuthorizationStateReadyLoadChats implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateReadyLoadChats implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private static final Logger logger = LoggerFactory.getLogger(AuthorizationStateReadyLoadChats.class);
 

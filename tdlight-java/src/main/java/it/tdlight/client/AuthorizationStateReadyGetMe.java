@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-final class AuthorizationStateReadyGetMe implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateReadyGetMe implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private static final Logger logger = LoggerFactory.getLogger(AuthorizationStateReadyGetMe.class);
 

@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.StringJoiner;
 
-public final class Result<T extends TdApi.Object> {
+public class Result<T extends TdApi.Object> {
 
 	private final T object;
 	private final Error error;

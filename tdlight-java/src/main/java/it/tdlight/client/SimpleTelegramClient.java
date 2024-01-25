@@ -33,7 +33,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("unused")
-public final class SimpleTelegramClient implements Authenticable, MutableTelegramClient, AutoCloseable {
+public class SimpleTelegramClient implements Authenticable, MutableTelegramClient, AutoCloseable {
 
 	public static final Logger LOG = LoggerFactory.getLogger(SimpleTelegramClient.class);
 

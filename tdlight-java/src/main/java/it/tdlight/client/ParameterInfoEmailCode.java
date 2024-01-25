@@ -6,7 +6,7 @@ import it.tdlight.jni.TdApi.EmailAddressResetStatePending;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public final class ParameterInfoEmailCode implements ParameterInfo {
+public class ParameterInfoEmailCode implements ParameterInfo {
 
 	private final boolean allowGoogleId;
 	private final boolean allowAppleId;

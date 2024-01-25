@@ -3,7 +3,7 @@ package it.tdlight;
 import it.tdlight.ExceptionHandler;
 import it.tdlight.UpdatesHandler;
 
-final class MultiHandler {
+public class MultiHandler {
 
 	private final UpdatesHandler updatesHandler;
 	private final ExceptionHandler exceptionHandler;

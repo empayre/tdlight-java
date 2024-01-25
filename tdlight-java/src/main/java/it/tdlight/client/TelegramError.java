@@ -4,7 +4,7 @@ import it.tdlight.jni.TdApi;
 import it.tdlight.jni.TdApi.Error;
 import java.util.Objects;
 
-public final class TelegramError extends RuntimeException {
+public class TelegramError extends RuntimeException {
 
 	private final int code;
 	private final String message;

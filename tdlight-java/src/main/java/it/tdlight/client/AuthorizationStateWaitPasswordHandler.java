@@ -7,7 +7,7 @@ import it.tdlight.jni.TdApi.AuthorizationStateWaitPassword;
 import it.tdlight.jni.TdApi.CheckAuthenticationPassword;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 
-final class AuthorizationStateWaitPasswordHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateWaitPasswordHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private final TelegramClient client;
 	private final ClientInteraction clientInteraction;

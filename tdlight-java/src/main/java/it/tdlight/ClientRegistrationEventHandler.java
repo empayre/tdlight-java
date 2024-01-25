@@ -3,7 +3,7 @@ package it.tdlight;
 import java.util.Map;
 import java.util.function.LongSupplier;
 
-interface ClientRegistrationEventHandler {
+public interface ClientRegistrationEventHandler {
 
 	void onClientRegistered(int clientId, LongSupplier nextQueryIdSupplier);
 }

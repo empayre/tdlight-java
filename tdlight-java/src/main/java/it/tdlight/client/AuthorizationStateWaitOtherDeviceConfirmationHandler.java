@@ -4,7 +4,7 @@ import it.tdlight.ExceptionHandler;
 import it.tdlight.jni.TdApi.AuthorizationStateWaitOtherDeviceConfirmation;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 
-final class AuthorizationStateWaitOtherDeviceConfirmationHandler implements
+public class AuthorizationStateWaitOtherDeviceConfirmationHandler implements
 		GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private final ClientInteraction clientInteraction;

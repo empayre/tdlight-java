@@ -48,7 +48,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Helper class to load JNI resources.
  *
  */
-public final class NativeLibraryLoader {
+public class NativeLibraryLoader {
 
 	private static final Logger logger = LoggerFactory.getLogger(NativeLibraryLoader.class);
 

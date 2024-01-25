@@ -2,7 +2,7 @@ package it.tdlight.client;
 
 import java.util.concurrent.CompletableFuture;
 
-class AuthenticationDataQrCode implements SimpleAuthenticationSupplier<AuthenticationDataQrCode> {
+public class AuthenticationDataQrCode implements SimpleAuthenticationSupplier<AuthenticationDataQrCode> {
 
 	@Override
 	public boolean isQrCode() {

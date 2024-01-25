@@ -7,7 +7,7 @@ import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public final class ScannerUtils {
+public class ScannerUtils {
 
 	private static final Object LOCK = new Object();
 	private static InputStreamReader scanner = null;

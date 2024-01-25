@@ -3,7 +3,7 @@ package it.tdlight.client;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-class SequentialRequestsExecutor implements Executor {
+public class SequentialRequestsExecutor implements Executor {
 
 	private static volatile SequentialRequestsExecutor INSTANCE;
 

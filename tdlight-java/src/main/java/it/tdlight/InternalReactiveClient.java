@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-final class InternalReactiveClient implements ClientEventsHandler, ReactiveTelegramClient {
+public class InternalReactiveClient implements ClientEventsHandler, ReactiveTelegramClient {
 
 	private static final Marker TG_MARKER = MarkerFactory.getMarker("TG");
 	private static final Logger logger = LoggerFactory.getLogger(InternalReactiveClient.class);

@@ -9,7 +9,7 @@ import it.tdlight.jni.TdApi.CheckAuthenticationEmailCode;
 import it.tdlight.jni.TdApi.SetAuthenticationEmailAddress;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 
-final class AuthorizationStateWaitEmailAddressHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateWaitEmailAddressHandler implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private final TelegramClient client;
 	private final ClientInteraction clientInteraction;

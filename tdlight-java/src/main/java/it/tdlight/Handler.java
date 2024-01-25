@@ -4,7 +4,7 @@ import it.tdlight.ExceptionHandler;
 import it.tdlight.ResultHandler;
 import it.tdlight.jni.TdApi;
 
-final class Handler<R extends TdApi.Object> {
+public class Handler<R extends TdApi.Object> {
 
 	private final ResultHandler<R> resultHandler;
 	private final ExceptionHandler exceptionHandler;

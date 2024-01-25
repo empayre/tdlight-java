@@ -3,7 +3,7 @@ package it.tdlight.client;
 import it.tdlight.jni.TdApi.AuthorizationStateReady;
 import it.tdlight.jni.TdApi.UpdateAuthorizationState;
 
-final class AuthorizationStateWaitReady implements GenericUpdateHandler<UpdateAuthorizationState> {
+public class AuthorizationStateWaitReady implements GenericUpdateHandler<UpdateAuthorizationState> {
 
 	private final Runnable setReady;
 
