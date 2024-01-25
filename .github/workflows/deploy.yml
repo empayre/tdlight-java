@@ -26,11 +26,17 @@ jobs:
           distribution: temurin
           cache: 'maven'
 
+      - name: Build packages
+        run:  |
+          set -xeo pipefail
+          
+          mvn -B -X -f bom/pom.xml -Drevision="${GITHUB_SHA::7}" -P "java8,java17" clean deploy
+          echo "Done."
+
       - name: Deploy package
         shell: bash
         run: |
           set -xeo pipefail
-          echo "REVISION: $REVISION"
           
           mvn -B -X -f bom/pom.xml -Drevision="${GITHUB_SHA::7}" -P "java8,java17" clean deploy
           echo "Done."
