@@ -30,7 +30,7 @@ jobs:
         run:  |
           set -xeo pipefail
           
-          mvn -B -X -f bom/pom.xml -Drevision="${GITHUB_SHA::7}" -P "java8,java17" clean deploy
+          mvn -B -X -f bom/pom.xml -Drevision="${GITHUB_SHA::7}" -P "java8,java17" clean install
           echo "Done."
 
       - name: Deploy package
