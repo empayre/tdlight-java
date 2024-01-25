@@ -26,28 +26,12 @@ jobs:
           distribution: temurin
           cache: 'maven'
 
-      - name: Build packages
-        run:  |
-          set -xeo pipefail
-          
-          mvn -B -f bom/pom.xml -Drevision="1.0-${GITHUB_SHA::7}" -P "java8,java17" clean install
-          ls
-          echo "Done."
-
-      - name: Set up JDK 17 (Release)
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-          distribution: temurin
-          cache: 'maven'
-          server-id: github
-
       - name: Deploy package
         shell: bash
         run: |
           set -xeo pipefail
           
-          mvn -B -X -e -f bom/pom.xml -Drevision="1.0-${GITHUB_SHA::7}" -P "java8,java17" clean deploy
+          mvn -B -f bom/pom.xml -Drevision="1.0-${GITHUB_SHA::7}" -P "java8,java17" clean deploy
           echo "Done."
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
