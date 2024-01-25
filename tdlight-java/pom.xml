@@ -5,16 +5,19 @@
 	<artifactId>tdlight-java</artifactId>
 	<name>TDLight Java Wrapper</name>
 	<packaging>jar</packaging>
+
 	<parent>
 		<groupId>com.empayre</groupId>
 		<version>${revision}</version>
 		<artifactId>tdlight-java-parent</artifactId>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<revision>1.0-SNAPSHOT</revision>
 	</properties>
+
 	<repositories>
 		<repository>
 			<id>mchv-release</id>
@@ -26,24 +29,27 @@
 			<name>MCHV Snapshot Apache Maven Packages</name>
 			<url>https://mvn.mchv.eu/repository/mchv-snapshot</url>
 		</repository>
+		<repository>
+			<id>github</id>
+			<name>GitHub Empayre Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/empayre/adapter-c2c-proto</url>
+		</repository>
 	</repositories>
+
 	<distributionManagement>
 		<repository>
-			<id>mchv-release-distribution</id>
-			<name>MCHV Release Apache Maven Packages Distribution</name>
-			<url>https://mvn.mchv.eu/repository/mchv</url>
+			<id>github</id>
+			<name>GitHub Empayre Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/empayre/adapter-c2c-proto</url>
 		</repository>
-		<snapshotRepository>
-			<id>mchv-snapshot-distribution</id>
-			<name>MCHV Snapshot Apache Maven Packages Distribution</name>
-			<url>https://mvn.mchv.eu/repository/mchv-snapshot</url>
-		</snapshotRepository>
 	</distributionManagement>
+
 	<scm>
 		<connection>scm:git:https://git.ignuranza.net/tdlight-team/tdlight-java.git</connection>
 		<developerConnection>scm:git:https://git.ignuranza.net/tdlight-team/tdlight-java.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
