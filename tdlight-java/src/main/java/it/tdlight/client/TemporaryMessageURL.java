@@ -7,7 +7,7 @@ public class TemporaryMessageURL {
 	private final long chatId;
 	private final long messageId;
 
-	TemporaryMessageURL(long chatId, long messageId) {
+	public TemporaryMessageURL(long chatId, long messageId) {
 		this.chatId = chatId;
 		this.messageId = messageId;
 	}
@@ -41,6 +41,4 @@ public class TemporaryMessageURL {
 	public String toString() {
 		return "TemporaryMessageURL[" + "chatId=" + chatId + ", " + "messageId=" + messageId + ']';
 	}
-
-
 }
